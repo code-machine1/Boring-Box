@@ -1,0 +1,310 @@
+Dependencies for Project 'AT32F421_IAP', Target 'AT32F421_IAP': (DO NOT MODIFY !)
+CompilerVersion: 6220000::V6.22::ARMCLANG
+F (..\src\at32f421_int.c)(0x684965E9)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_int.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_int.h)(0x684965E9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+I (..\inc\wk_system.h)(0x684965E9)
+I (..\inc\iap.h)(0x68031615)
+I (..\system\tmt.h)(0x68031615)
+I (..\inc\wk_usart.h)(0x684965E9)
+I (..\inc\at32f421_wk_config.h)(0x684965E9)
+F (..\src\at32f421_wk_config.c)(0x684965E9)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_wk_config.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_wk_config.h)(0x684965E9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\src\main.c)(0x684965E9)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/main.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_wk_config.h)(0x684965E9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+I (..\inc\wk_usart.h)(0x684965E9)
+I (..\inc\wk_gpio.h)(0x684965E9)
+I (..\inc\wk_system.h)(0x684965E9)
+I (..\app\sensor.h)(0x68031615)
+I (..\inc\at32f421_int.h)(0x684965E9)
+I (..\inc\iap.h)(0x68031615)
+I (..\system\tmt.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\2.4.0\perf_counter.h)(0x681B7D13)
+I (C:\Users\18067\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\2.4.0\perfc_port_default.h)(0x681B7D13)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+F (..\src\wk_system.c)(0x684965E9)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/wk_system.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\wk_system.h)(0x684965E9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\src\wk_usart.c)(0x684965E9)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/wk_usart.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\wk_usart.h)(0x684965E9)
+I (..\inc\at32f421_wk_config.h)(0x684965E9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\src\iap.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/iap.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\iap.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+I (..\inc\wk_usart.h)(0x684965E9)
+I (..\inc\at32f421_wk_config.h)(0x684965E9)
+F (..\src\wk_gpio.c)(0x684965E9)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/wk_gpio.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\wk_gpio.h)(0x684965E9)
+I (..\inc\at32f421_wk_config.h)(0x684965E9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\system\tmt.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/tmt.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\system\tmt.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_crm.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_crm.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_gpio.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_gpio.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_usart.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_usart.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_pwc.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_pwc.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_debug.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_debug.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_flash.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_flash.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\drivers\src\at32f421_misc.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/at32f421_misc.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (..\..\libraries\cmsis\cm4\device_support\system_at32f421.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/system_at32f421.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+F (.\startup_at32f421.s)(0x684965E9)(--target=armv7em-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-Wa,armasm,--pd,"__UVISION_VERSION SETA 540" -Wa,armasm,--pd,"AT32F421C8T7 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_at32f421.o)
+F (..\app\sensor.c)(0x68031615)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/sensor.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\app\sensor.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+I (..\inc\at32f421_int.h)(0x684965E9)
+F (C:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/source/armcc/retarget_io.c)(0x6645612C)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/retarget_io.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (RTE\_AT32F421_IAP\RTE_Components.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\ARM\CMSIS-Compiler\2.1.0\include\retarget_stdout.h)(0x6645612C)
+F (C:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/source/stdout_evr.c)(0x6645612C)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/stdout_evr.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\ARM\CMSIS-Compiler\2.1.0\include\retarget_stdout.h)(0x6645612C)
+I (C:\Users\18067\AppData\Local\Arm\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+F (C:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Source/EventRecorder.c)(0x6645596A)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/eventrecorder.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (RTE\_AT32F421_IAP\RTE_Components.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\at32f421.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f421.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_def.h)(0x68031615)
+I (..\inc\at32f421_conf.h)(0x684965E9)
+I (..\..\libraries\drivers\inc\at32f421_crm.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_gpio.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_usart.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_pwc.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_debug.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_flash.h)(0x68031615)
+I (..\..\libraries\drivers\inc\at32f421_misc.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+I (RTE\CMSIS-View\EventRecorderConf.h)(0x68031615)
+F (RTE/CMSIS-View/EventRecorderConf.h)(0x68031615)()
+F (C:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0/perf_counter.c)(0x681B7D13)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/perf_counter.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_armclang.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\2.4.0\perf_counter.h)(0x681B7D13)
+I (C:\Users\18067\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\2.4.0\perfc_port_default.h)(0x681B7D13)
+F (C:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0/perfc_port_default.c)(0x681B7D13)(-xc -std=gnu99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../system -I ../app -I ../driver-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-D__UVISION_VERSION="540" -DAT32F421C8T7 -D_RTE_ -DAT32F421C8T7 -DUSE_STDPERIPH_DRIVER -DAT_START_F421_V1  -include "Pre_Include_Global.h"-o ./objects/perfc_port_default.o -MMD)
+I (RTE\_AT32F421_IAP\Pre_Include_Global.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x68031615)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_armclang.h)(0x68031615)
+I (C:\Users\18067\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\2.4.0\perf_counter.h)(0x681B7D13)
+I (C:\Users\18067\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\2.4.0\perfc_port_default.h)(0x681B7D13)
+F (C:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0/systick_wrapper_gnu.s)(0x681B7D13)(--target=armv7em-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/CMSIS-View-I./RTE/_AT32F421_IAP-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.1.0/include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7/Device/Include-IC:/Users/18067/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/2.4.0-IC:/Users/18067/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.7-Wa,armasm,--pd,"__UVISION_VERSION SETA 540" -Wa,armasm,--pd,"AT32F421C8T7 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/systick_wrapper_gnu.o)

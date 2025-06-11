@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <MCUInfo>
+        <MCUSerials>AT32F421</MCUSerials>
+        <MCUName>AT32F421C8T7</MCUName>
+        <MCUPackage>LQFP48</MCUPackage>
+    </MCUInfo>
+    <DEBUG>
+        <Mode>
+            <ModeSub name="SWD" value="TRUE"/>
+        </Mode>
+    </DEBUG>
+    <SYSTEM>
+        <Mode>
+            <ModeSub name="Time_Base" value="SysTick"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="Delay_Mode" value="Interrupt"/>
+        </Parameters>
+    </SYSTEM>
+    <USART1>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+    </USART1>
+    <NVIC>
+        <SysTick_Handler>1;15;0;0;0</SysTick_Handler>
+        <FLASH_IRQHandler>0;0;0;0;0</FLASH_IRQHandler>
+        <CRM_IRQHandler>0;0;0;0;0</CRM_IRQHandler>
+        <USART1_IRQHandler>1;0;0;0;0</USART1_IRQHandler>
+    </NVIC>
+    <GPIO>
+        <Signal SignalName="GPIO_Output" PinName="PB11">
+            <Parameters name="GPIO_Outputlevel" value="GPIO_OUTPUTLEVEL_HIGH"/>
+            <Parameters name="Label" value="LED"/>
+        </Signal>
+    </GPIO>
+    <ClockConfiguration>
+        <lextbypass>0</lextbypass>
+        <rtcsel>0</rtcsel>
+        <hext>8.000000</hext>
+        <hextbypass>0</hextbypass>
+        <pllhextdiv>0</pllhextdiv>
+        <pllrcs>1</pllrcs>
+        <pllmode>0</pllmode>
+        <pllmult>30</pllmult>
+        <pllms>1</pllms>
+        <pllns>120</pllns>
+        <pllfr>8</pllfr>
+        <sclkselect>1</sclkselect>
+        <ahbdiv>1</ahbdiv>
+        <apb1div>1</apb1div>
+        <apb2div>1</apb2div>
+        <hicktosclk>0</hicktosclk>
+        <clkout>0</clkout>
+        <clkoutdiv>1</clkoutdiv>
+        <clkoutpinselect>0</clkoutpinselect>
+        <adcswitch>0</adcswitch>
+        <adcdiv>6</adcdiv>
+        <systicsel>8</systicsel>
+    </ClockConfiguration>
+    <PINInfo>
+        <PinSub pinname="PB11" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PA9" signalname="USART1_TX" signaltype="2"/>
+        <PinSub pinname="PA10" signalname="USART1_RX" signaltype="2"/>
+        <PinSub pinname="PA13" signalname="DEBUG_SWDIO" signaltype="2"/>
+        <PinSub pinname="PA14" signalname="DEBUG_SWCLK" signaltype="2"/>
+    </PINInfo>
+    <ProjectInfomation>
+        <ProjectName>AT32F421_IAP</ProjectName>
+        <ProjectLocation>C:/Users/18067/Desktop/AT32_State_Template-master/app</ProjectLocation>
+        <ToolchainIDE>MDK_V5</ToolchainIDE>
+        <ARMCompiler>0</ARMCompiler>
+        <KeepUserCode>true</KeepUserCode>
+        <NotUsedPinAnalog>false</NotUsedPinAnalog>
+        <CodeSplitIP>true</CodeSplitIP>
+        <AddNecessaryFileFlag>true</AddNecessaryFileFlag>
+        <MinHeapSize>0x200</MinHeapSize>
+        <MinStackSize>0x400</MinStackSize>
+        <UseFirmware>true</UseFirmware>
+        <PackageVersion>V2.1.8</PackageVersion>
+    </ProjectInfomation>
+</Root>

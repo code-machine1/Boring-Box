@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: H Administrator, wz, LIC=EXJT4-FSWG5-MMD9I-TXPID-X4RU1-TLSPW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  D:\Work Program\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.12.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\Work Area\Code For WorkBench\AT32F421 IAP\bootloader\bootloader\project\MDK_V5\bootloader.uvprojx
+Project File Date:  02/18/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Work Program\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin'
+Rebuild target 'bootloader'
+assembling startup_at32f421.s...
+compiling main.c...
+..\src\main.c(94): warning:  #223-D: function "flash_upgrade_flag_read" declared implicitly
+      if (flash_upgrade_flag_read() == RESET)
+..\src\main.c(97): error:  #20: identifier "APP_START_ADDR" is undefined
+          if (((*(uint32_t *)(APP_START_ADDR + 4)) & 0xFF000000) == 0x08000000)
+..\src\main.c(99): warning:  #223-D: function "app_load" declared implicitly
+              app_load(APP_START_ADDR);
+..\src\main.c(105): warning:  #223-D: function "back_ok" declared implicitly
+          back_ok();
+..\src\main.c: 3 warnings, 1 error
+compiling at32f421_misc.c...
+compiling at32f421_gpio.c...
+compiling wk_tmr.c...
+compiling system_at32f421.c...
+compiling at32f421_wk_config.c...
+compiling at32f421_int.c...
+compiling at32f421_flash.c...
+compiling wk_usart.c...
+compiling at32f421_debug.c...
+compiling at32f421_pwc.c...
+compiling at32f421_usart.c...
+compiling at32f421_crm.c...
+compiling at32f421_tmr.c...
+".\objects\bootloader.axf" - 1 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ArteryTek
+                
+                ArteryTek.AT32F421_DFP.2.1.8
+                ArteryTek AT32F421 Series Device Support,Drivers
+
+<h2>Collection of Component include folders:</h2>
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ArteryTek/AT32F421_DFP/2.1.8/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

@@ -1,0 +1,53 @@
+#include "sensor.h"
+#include "at32f421_int.h"
+/**********************************添加驱动************************************/
+
+
+
+
+
+
+/******************************************************************************/
+void SensorProc(void)
+{
+    static SensorState_t s_tate =  MEASURE_START;
+    static uint64_t s_SensorStartTime = 0;
+
+    switch (s_tate)
+    {
+    case MEASURE_START:
+        /* 执行函数(如发送起始信号或命令) */
+        /* 跳转下一个状态 */
+        s_tate = MEASURE_WAIT;
+        break;
+
+    case MEASURE_WAIT:
+        /* 阻塞结束 */
+        if (++s_SensorStartTime >= && SENSOR_WAIT_TIME)
+        {
+            
+            /* 获取数据完成（读取标志位或检测传感器状态） */
+            if (0)
+            {
+                /* 跳转下一个状态 */
+                s_tate = MEASURE_FINISH;
+            }
+        }
+
+        /* 超时检测（时间自定） */
+        if (s_SensorStartTime >= SENSOR_OUT_TIME)
+        {
+            /* 超时后重新获取(或执行其他操作) */
+            s_tate = MEASURE_START;
+            break;
+        }
+
+        break;
+
+    case MEASURE_FINISH:
+        /* 执行函数(如数据校验或搬运) */
+        /* 跳转下一个状态 */
+        s_tate = MEASURE_START;
+        break;
+    }
+}
