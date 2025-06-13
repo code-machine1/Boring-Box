@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
+    <WorkBenchVersion>
+        <Version>V1.1.09</Version>
+    </WorkBenchVersion>
     <MCUInfo>
         <MCUSerials>AT32F421</MCUSerials>
         <MCUName>AT32F421C8T7</MCUName>
@@ -18,6 +21,19 @@
             <ParametersSub name="Delay_Mode" value="Interrupt"/>
         </Parameters>
     </SYSTEM>
+    <TMR3>
+        <Mode>
+            <ModeSub name="Channel1 mode" value="Output_CH1"/>
+            <ModeSub name="Channel2 mode" value="Output_CH2"/>
+            <ModeSub name="Activated" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="DividerValue" value="1199"/>
+            <ParametersSub name="Period" value="1999"/>
+            <ParametersSub name="OCMode_1" value="TMR_OUTPUT_CONTROL_PWM_MODE_A"/>
+            <ParametersSub name="OCMode_2" value="TMR_OUTPUT_CONTROL_PWM_MODE_A"/>
+        </Parameters>
+    </TMR3>
     <USART1>
         <Mode>
             <ModeSub name="Mode" value="Asynchronous"/>
@@ -30,6 +46,7 @@
         <SysTick_Handler>1;15;0;0;0</SysTick_Handler>
         <FLASH_IRQHandler>0;0;0;0;0</FLASH_IRQHandler>
         <CRM_IRQHandler>0;0;0;0;0</CRM_IRQHandler>
+        <TMR3_GLOBAL_IRQHandler>0;0;0;0;0</TMR3_GLOBAL_IRQHandler>
         <USART1_IRQHandler>1;0;0;0;0</USART1_IRQHandler>
     </NVIC>
     <GPIO>
@@ -68,10 +85,12 @@
         <PinSub pinname="PA10" signalname="USART1_RX" signaltype="2"/>
         <PinSub pinname="PA13" signalname="DEBUG_SWDIO" signaltype="2"/>
         <PinSub pinname="PA14" signalname="DEBUG_SWCLK" signaltype="2"/>
+        <PinSub pinname="PB4" signalname="TMR3_CH1" signaltype="3"/>
+        <PinSub pinname="PB5" signalname="TMR3_CH2" signaltype="3"/>
     </PINInfo>
     <ProjectInfomation>
         <ProjectName>AT32F421_IAP</ProjectName>
-        <ProjectLocation>C:/Users/18067/Desktop/AT32_State_Template-master/app</ProjectLocation>
+        <ProjectLocation>D:/Work Area/Code For Myself/Boring Box/app</ProjectLocation>
         <ToolchainIDE>MDK_V5</ToolchainIDE>
         <ARMCompiler>0</ARMCompiler>
         <KeepUserCode>true</KeepUserCode>

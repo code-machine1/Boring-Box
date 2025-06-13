@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
   <PortType>0</PortType>
-  <COMPort>0</COMPort>
+  <COMPort>1</COMPort>
   <BoudRate>115200</BoudRate>
   <CRC>false</CRC>
   <AppAddress>08004000</AppAddress>
-  <AppDownloadFile>C:\Users\18067\Desktop\AT32_State_Template-master\app\project\MDK_V5\objects\AT32F421_IAP.hex</AppDownloadFile>
+  <AppDownloadFile>D:\Work Area\Code For Myself\Boring Box\app\project\MDK_V5\objects\AT32F421_IAP.hex</AppDownloadFile>
 </Configuration>

@@ -26,6 +26,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "at32f421_wk_config.h"
+#include "wk_tmr.h"
 #include "wk_usart.h"
 #include "wk_gpio.h"
 #include "wk_system.h"
@@ -64,6 +65,7 @@
 void iap_task(void);
 void led_task(void);
 void sensor_task(void);
+void Servo_SetAngle(uint8_t TIM, float Angle); 
 /* add user code end function prototypes */
 
 /* private user code ---------------------------------------------------------*/
@@ -78,52 +80,45 @@ void sensor_task(void);
   */
 int main(void)
 {
-  /* add user code begin 1 */
+    /* add user code begin 1 */
     nvic_vector_table_set(NVIC_VECTTAB_FLASH, 0x4000);
     /* add user code end 1 */
-
-  /* system clock config. */
-  wk_system_clock_config();
-
-  /* config periph clock. */
-  wk_periph_clock_config();
-
-  /* nvic config. */
-  wk_nvic_config();
-
-  /* timebase config. */
-  wk_timebase_init();
-
-  /* init usart1 function. */
-  wk_usart1_init();
-
-  /* init gpio function. */
-  wk_gpio_config();
-
-  /* add user code begin 2 */
+    /* system clock config. */
+    wk_system_clock_config();
+    /* config periph clock. */
+    wk_periph_clock_config();
+    /* nvic config. */
+    wk_nvic_config();
+    /* timebase config. */
+    wk_timebase_init();
+    /* init gpio function. */
+    wk_gpio_config();
+    /* init usart1 function. */
+    wk_usart1_init();
+    /* init tmr3 function. */
+    wk_tmr3_init();
+    /* add user code begin 2 */
     tmt_init();
     tmt.create(iap_task, 10);
-    tmt.create(led_task, 100);
-    tmt.create(sensor_task, SENSOR_RUN_TIME);
-    
-	SystemCoreClock = 15000000ul;
-	init_cycle_counter(true);
-	EventRecorderInitialize(0, 1);
-	iap_init();
-	printf("debug log\r\n");
-	
+    SystemCoreClock = 15000000ul;
+    init_cycle_counter(true);
+    EventRecorderInitialize(0, 1);
+    iap_init();
+	Servo_SetAngle(1,10);
+	Servo_SetAngle(2,10);
+    printf("debug log\r\n");
+
     /* add user code end 2 */
 
-  while(1)
-  {
-    /* add user code begin 3 */
-        
+    while (1)
+    {
+        /* add user code begin 3 */
         tmt.run();
         /* add user code end 3 */
-  }
+    }
 }
 
-  /* add user code begin 4 */
+/* add user code begin 4 */
 
 /**
   * @brief  iap task function
@@ -135,31 +130,46 @@ void iap_task(void)
     iap_command_handle();
 }
 
+
 /**
-  * @brief  led task function(only for debug)
+  * @brief  servo task function
   * @param  none
   * @retval none
   */
-void led_task(void)
+void Servo_SetAngle(uint8_t TIM, float Angle)
 {
-    if (gpio_output_data_bit_read(LED_GPIO_PORT, LED_PIN))
+    if (TIM == 1)
     {
-        gpio_bits_reset(LED_GPIO_PORT, LED_PIN);
+        if (Angle >= 180)
+        {
+            Angle = 180;
+        }
+
+        if (Angle <= 0)
+        {
+            Angle = 0;
+        }
+
+        Angle = (Angle / 180 * 2000 + 500) / 10;
+        tmr_channel_enable(TMR3, TMR_SELECT_CHANNEL_1, TRUE);
+        tmr_channel_value_set(TMR3, TMR_SELECT_CHANNEL_1, Angle);
     }
     else
     {
-        gpio_bits_set(LED_GPIO_PORT, LED_PIN);
-    }
-}
+        if (Angle >= 180)
+        {
+            Angle = 180;
+        }
 
-/**
-  * @brief  sensor task function(only for debug)
-  * @param  none
-  * @retval none
-  */
-void sensor_task(void)
-{
-    SensorProc();
+        if (Angle <= 0)
+        {
+            Angle = 0;
+        }
+
+        Angle = (Angle / 180 * 2000 + 500) / 10;
+        tmr_channel_enable(TMR3, TMR_SELECT_CHANNEL_2, TRUE);
+        tmr_channel_value_set(TMR3, TMR_SELECT_CHANNEL_2, Angle);
+    }
 }
 
 /* add user code end 4 */
