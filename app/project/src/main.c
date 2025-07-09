@@ -104,8 +104,8 @@ int main(void)
     init_cycle_counter(true);
     EventRecorderInitialize(0, 1);
     iap_init();
-	Servo_SetAngle(1,10);
-	Servo_SetAngle(2,10);
+	Servo_SetAngle(1,0);
+	Servo_SetAngle(2,0);
     printf("debug log\r\n");
 
     /* add user code end 2 */

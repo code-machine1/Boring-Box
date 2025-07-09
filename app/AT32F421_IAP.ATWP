@@ -8,6 +8,14 @@
         <MCUName>AT32F421C8T7</MCUName>
         <MCUPackage>LQFP48</MCUPackage>
     </MCUInfo>
+    <ADC1>
+        <Mode>
+            <ModeSub name="IN1" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="Channel_OrdinarySequence_1" value="ADC_CHANNEL_1"/>
+        </Parameters>
+    </ADC1>
     <DEBUG>
         <Mode>
             <ModeSub name="SWD" value="TRUE"/>
@@ -46,6 +54,7 @@
         <SysTick_Handler>1;15;0;0;0</SysTick_Handler>
         <FLASH_IRQHandler>0;0;0;0;0</FLASH_IRQHandler>
         <CRM_IRQHandler>0;0;0;0;0</CRM_IRQHandler>
+        <ADC1_CMP_IRQHandler>0;0;0;0;0</ADC1_CMP_IRQHandler>
         <TMR3_GLOBAL_IRQHandler>0;0;0;0;0</TMR3_GLOBAL_IRQHandler>
         <USART1_IRQHandler>1;0;0;0;0</USART1_IRQHandler>
     </NVIC>
@@ -75,11 +84,13 @@
         <clkout>0</clkout>
         <clkoutdiv>1</clkoutdiv>
         <clkoutpinselect>0</clkoutpinselect>
-        <adcswitch>0</adcswitch>
+        <adcswitch>1</adcswitch>
         <adcdiv>6</adcdiv>
         <systicsel>8</systicsel>
     </ClockConfiguration>
     <PINInfo>
+        <PinSub pinname="PA0" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PA1" signalname="ADC1_IN1" signaltype="3"/>
         <PinSub pinname="PB11" signalname="GPIO_Output" signaltype="3"/>
         <PinSub pinname="PA9" signalname="USART1_TX" signaltype="2"/>
         <PinSub pinname="PA10" signalname="USART1_RX" signaltype="2"/>
