@@ -26,6 +26,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "at32f421_wk_config.h"
+#include "wk_adc.h"
 #include "wk_tmr.h"
 #include "wk_usart.h"
 #include "wk_gpio.h"
@@ -42,7 +43,7 @@
 
 /* private typedef -----------------------------------------------------------*/
 /* add user code begin private typedef */
-
+#define IAP_TASK_RUN_TIME    10
 /* add user code end private typedef */
 
 /* private define ------------------------------------------------------------*/
@@ -65,7 +66,7 @@
 void iap_task(void);
 void led_task(void);
 void sensor_task(void);
-void Servo_SetAngle(uint8_t TIM, float Angle); 
+void Servo_SetAngle(uint8_t TIM, float Angle);
 /* add user code end function prototypes */
 
 /* private user code ---------------------------------------------------------*/
@@ -93,26 +94,73 @@ int main(void)
     wk_timebase_init();
     /* init gpio function. */
     wk_gpio_config();
+    /* init adc1 function. */
+    wk_adc1_init();
     /* init usart1 function. */
     wk_usart1_init();
     /* init tmr3 function. */
     wk_tmr3_init();
     /* add user code begin 2 */
     tmt_init();
-    tmt.create(iap_task, 10);
-    SystemCoreClock = 15000000ul;
+    tmt.create(iap_task, IAP_TASK_RUN_TIME);
     init_cycle_counter(true);
     EventRecorderInitialize(0, 1);
     iap_init();
-	Servo_SetAngle(1,0);
-	Servo_SetAngle(2,0);
-    printf("debug log\r\n");
-
+	/* 推杆到头角度 110 */
+	/* 推杆归位角度 0   */
+    Servo_SetAngle(2, 0);
+	delay_ms(500);
+	/* 盒子闭合角度 180 */
+	/* 盒子开启角度 100 */
+    Servo_SetAngle(1, 175);
+	
+    uint16_t i = 180;
+	bool fuck_push = false;
+	/* wait for system reday */
+	delay_ms(2000);
+	printf("system running\r\n");
     /* add user code end 2 */
 
     while (1)
     {
         /* add user code begin 3 */
+		#if 0
+		if(fuck_push == false)
+		{
+			delay_ms(200);
+		    i-=5;
+			Servo_SetAngle(1, i);
+			if(i<=110)
+			{
+			    fuck_push = true;
+			}
+		}
+		if(fuck_push)
+		{
+			delay_ms(200);
+		    i+=5;
+			Servo_SetAngle(1, i);
+			if(i>=180)
+			{
+			    fuck_push = false;
+			}
+		}
+		#endif
+		#if 1
+		if(gpio_input_data_bit_read(GPIOA,GPIO_PINS_0))
+		{
+			delay_ms(500);
+			Servo_SetAngle(1,110);
+			delay_ms(500);
+		    Servo_SetAngle(2, 100);
+		}
+		else
+		{   delay_ms(500);
+		    Servo_SetAngle(2, 0);
+			delay_ms(500);
+			Servo_SetAngle(1,175);
+		}
+		#endif
         tmt.run();
         /* add user code end 3 */
     }
@@ -130,7 +178,6 @@ void iap_task(void)
     iap_command_handle();
 }
 
-
 /**
   * @brief  servo task function
   * @param  none
@@ -144,12 +191,10 @@ void Servo_SetAngle(uint8_t TIM, float Angle)
         {
             Angle = 180;
         }
-
         if (Angle <= 0)
         {
             Angle = 0;
         }
-
         Angle = (Angle / 180 * 2000 + 500) / 10;
         tmr_channel_enable(TMR3, TMR_SELECT_CHANNEL_1, TRUE);
         tmr_channel_value_set(TMR3, TMR_SELECT_CHANNEL_1, Angle);
@@ -165,7 +210,6 @@ void Servo_SetAngle(uint8_t TIM, float Angle)
         {
             Angle = 0;
         }
-
         Angle = (Angle / 180 * 2000 + 500) / 10;
         tmr_channel_enable(TMR3, TMR_SELECT_CHANNEL_2, TRUE);
         tmr_channel_value_set(TMR3, TMR_SELECT_CHANNEL_2, Angle);

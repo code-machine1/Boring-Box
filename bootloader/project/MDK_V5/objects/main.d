@@ -1,26 +1,14 @@
-.\objects\main.o: ..\src\main.c
-.\objects\main.o: ..\inc\at32f421_wk_config.h
-.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\device_support\at32f421.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\core_support\core_cm4.h
-.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\core_support\cmsis_version.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\device_support\system_at32f421.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_def.h
-.\objects\main.o: ..\inc\at32f421_conf.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_crm.h
-.\objects\main.o: ..\..\libraries\cmsis\cm4\device_support\at32f421.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_tmr.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_gpio.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_usart.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_pwc.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_debug.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_flash.h
-.\objects\main.o: ..\..\libraries\drivers\inc\at32f421_misc.h
-.\objects\main.o: ..\inc\wk_tmr.h
-.\objects\main.o: ..\inc\wk_usart.h
-.\objects\main.o: ..\inc\flash.h
-.\objects\main.o: ..\inc\iap.h
+./objects/main.o: ..\src\main.c ..\inc\at32f421_wk_config.h \
+  ..\..\libraries\cmsis\cm4\device_support\at32f421.h \
+  ..\..\libraries\cmsis\cm4\core_support\core_cm4.h \
+  ..\..\libraries\cmsis\cm4\device_support\system_at32f421.h \
+  ..\..\libraries\drivers\inc\at32f421_def.h ..\inc\at32f421_conf.h \
+  ..\..\libraries\drivers\inc\at32f421_crm.h \
+  ..\..\libraries\drivers\inc\at32f421_tmr.h \
+  ..\..\libraries\drivers\inc\at32f421_gpio.h \
+  ..\..\libraries\drivers\inc\at32f421_usart.h \
+  ..\..\libraries\drivers\inc\at32f421_pwc.h \
+  ..\..\libraries\drivers\inc\at32f421_debug.h \
+  ..\..\libraries\drivers\inc\at32f421_flash.h \
+  ..\..\libraries\drivers\inc\at32f421_misc.h ..\inc\wk_tmr.h \
+  ..\inc\wk_usart.h ..\inc\flash.h ..\inc\iap.h

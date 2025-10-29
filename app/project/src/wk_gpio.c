@@ -49,6 +49,12 @@ void wk_gpio_config(void)
 
   /* add user code end gpio_config 1 */
 
+  /* gpio input config */
+  gpio_init_struct.gpio_mode = GPIO_MODE_INPUT;
+  gpio_init_struct.gpio_pins = GPIO_PINS_0;
+  gpio_init_struct.gpio_pull = GPIO_PULL_UP;
+  gpio_init(GPIOA, &gpio_init_struct);
+
   /* gpio output config */
   gpio_bits_set(LED_GPIO_PORT, LED_PIN);
 
@@ -58,6 +64,30 @@ void wk_gpio_config(void)
   gpio_init_struct.gpio_pins = LED_PIN;
   gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
   gpio_init(LED_GPIO_PORT, &gpio_init_struct);
+
+  /* gpio analog config */
+  gpio_init_struct.gpio_mode = GPIO_MODE_ANALOG;
+  gpio_init_struct.gpio_pins = GPIO_PINS_13 | GPIO_PINS_14 | GPIO_PINS_15;
+  gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+  gpio_init(GPIOC, &gpio_init_struct);
+
+  gpio_init_struct.gpio_mode = GPIO_MODE_ANALOG;
+  gpio_init_struct.gpio_pins = GPIO_PINS_0 | GPIO_PINS_1 | GPIO_PINS_6 | GPIO_PINS_7;
+  gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+  gpio_init(GPIOF, &gpio_init_struct);
+
+  gpio_init_struct.gpio_mode = GPIO_MODE_ANALOG;
+  gpio_init_struct.gpio_pins = GPIO_PINS_2 | GPIO_PINS_3 | GPIO_PINS_4 | GPIO_PINS_5 | GPIO_PINS_6 | 
+                               GPIO_PINS_7 | GPIO_PINS_8 | GPIO_PINS_11 | GPIO_PINS_12 | GPIO_PINS_15;
+  gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+  gpio_init(GPIOA, &gpio_init_struct);
+
+  gpio_init_struct.gpio_mode = GPIO_MODE_ANALOG;
+  gpio_init_struct.gpio_pins = GPIO_PINS_0 | GPIO_PINS_1 | GPIO_PINS_2 | GPIO_PINS_10 | GPIO_PINS_12 | 
+                               GPIO_PINS_13 | GPIO_PINS_14 | GPIO_PINS_15 | GPIO_PINS_3 | GPIO_PINS_6 | 
+                               GPIO_PINS_7 | GPIO_PINS_8 | GPIO_PINS_9;
+  gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
+  gpio_init(GPIOB, &gpio_init_struct);
 
   /* add user code begin gpio_config 2 */
 

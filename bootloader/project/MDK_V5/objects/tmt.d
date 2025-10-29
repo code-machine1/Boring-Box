@@ -1,21 +1,13 @@
-.\objects\tmt.o: ..\system\tmt.c
-.\objects\tmt.o: ..\system\tmt.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\device_support\at32f421.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\core_support\core_cm4.h
-.\objects\tmt.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\core_support\cmsis_version.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\core_support\cmsis_armcc.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\core_support\mpu_armv7.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\device_support\system_at32f421.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_def.h
-.\objects\tmt.o: ..\inc\at32f421_conf.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_crm.h
-.\objects\tmt.o: ..\..\libraries\cmsis\cm4\device_support\at32f421.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_tmr.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_gpio.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_usart.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_pwc.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_debug.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_flash.h
-.\objects\tmt.o: ..\..\libraries\drivers\inc\at32f421_misc.h
+./objects/tmt.o: ..\system\tmt.c ..\system\tmt.h \
+  ..\..\libraries\cmsis\cm4\device_support\at32f421.h \
+  ..\..\libraries\cmsis\cm4\core_support\core_cm4.h \
+  ..\..\libraries\cmsis\cm4\device_support\system_at32f421.h \
+  ..\..\libraries\drivers\inc\at32f421_def.h ..\inc\at32f421_conf.h \
+  ..\..\libraries\drivers\inc\at32f421_crm.h \
+  ..\..\libraries\drivers\inc\at32f421_tmr.h \
+  ..\..\libraries\drivers\inc\at32f421_gpio.h \
+  ..\..\libraries\drivers\inc\at32f421_usart.h \
+  ..\..\libraries\drivers\inc\at32f421_pwc.h \
+  ..\..\libraries\drivers\inc\at32f421_debug.h \
+  ..\..\libraries\drivers\inc\at32f421_flash.h \
+  ..\..\libraries\drivers\inc\at32f421_misc.h
