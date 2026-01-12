@@ -24,11 +24,8 @@
     </DEBUG>
     <SYSTEM>
         <Mode>
-            <ModeSub name="Time_Base" value="SysTick"/>
+            <ModeSub name="Time_Base" value=""/>
         </Mode>
-        <Parameters>
-            <ParametersSub name="Delay_Mode" value="Interrupt"/>
-        </Parameters>
     </SYSTEM>
     <TMR3>
         <Mode>
@@ -51,19 +48,72 @@
             <ParametersSub name="RealBaudRate" value="115163"/>
         </Parameters>
     </USART1>
+    <FREERTOS>
+        <Mode>
+            <ModeSub name="Activated" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="MCU_SRAM_SIZE" value="16384"/>
+            <ParametersSub name="configCPU_CLOCK_HZ" value="120000000"/>
+            <ParametersSub name="configUSE_RECURSIVE_MUTEXES" value="1"/>
+        </Parameters>
+        <Tasks>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="check_current"/>
+                <ParametersSub name="TaskPriority" value="2"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
+                <ParametersSub name="TaskEntryFunction" value="check_current_func"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="iap"/>
+                <ParametersSub name="TaskPriority" value="0"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
+                <ParametersSub name="TaskEntryFunction" value="iap_func"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="send_heartbeat"/>
+                <ParametersSub name="TaskPriority" value="1"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
+                <ParametersSub name="TaskEntryFunction" value="send_heartbeat_func"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+        </Tasks>
+        <Mutexes>
+            <ParametersGroup>
+                <ParametersSub name="MutexName" value="xI2CMutex"/>
+                <ParametersSub name="MutexAllocation" value="Dynamic"/>
+                <ParametersSub name="MutexBuffer" value="NULL"/>
+            </ParametersGroup>
+        </Mutexes>
+    </FREERTOS>
     <DMA>
         <MEMTOMEM0>
             <ParametersSub name="Instance" value="DMA1_Channel1"/>
         </MEMTOMEM0>
     </DMA>
     <NVIC>
-        <SysTick_Handler>1;15;0;0;0</SysTick_Handler>
-        <FLASH_IRQHandler>0;0;0;0;0</FLASH_IRQHandler>
-        <CRM_IRQHandler>0;0;0;0;0</CRM_IRQHandler>
-        <DMA1_Channel1_IRQHandler>0;0;0;0;0</DMA1_Channel1_IRQHandler>
-        <ADC1_CMP_IRQHandler>0;0;0;0;0</ADC1_CMP_IRQHandler>
-        <TMR3_GLOBAL_IRQHandler>0;0;0;0;0</TMR3_GLOBAL_IRQHandler>
-        <USART1_IRQHandler>1;0;0;0;0</USART1_IRQHandler>
+        <PendSV_Handler>1;15;0;1;0</PendSV_Handler>
+        <SysTick_Handler>1;15;0;1;0</SysTick_Handler>
+        <FLASH_IRQHandler>0;5;0;1;0</FLASH_IRQHandler>
+        <CRM_IRQHandler>0;5;0;1;0</CRM_IRQHandler>
+        <DMA1_Channel1_IRQHandler>0;5;0;1;0</DMA1_Channel1_IRQHandler>
+        <ADC1_CMP_IRQHandler>0;5;0;1;0</ADC1_CMP_IRQHandler>
+        <TMR3_GLOBAL_IRQHandler>0;5;0;1;0</TMR3_GLOBAL_IRQHandler>
+        <USART1_IRQHandler>1;5;0;1;0</USART1_IRQHandler>
     </NVIC>
     <GPIO>
         <Signal SignalName="GPIO_Input" PinName="PA0">
@@ -119,7 +169,7 @@
         <ProjectName>AT32F421_IAP</ProjectName>
         <ProjectLocation>D:/Work Area/Code For Myself/Boring Box/app</ProjectLocation>
         <ToolchainIDE>MDK_V5</ToolchainIDE>
-        <ARMCompiler>0</ARMCompiler>
+        <ARMCompiler>1</ARMCompiler>
         <KeepUserCode>true</KeepUserCode>
         <NotUsedPinAnalog>true</NotUsedPinAnalog>
         <CodeSplitIP>true</CodeSplitIP>

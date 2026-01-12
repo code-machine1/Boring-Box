@@ -1,0 +1,488 @@
+/* add user code begin Header */
+/**
+  ******************************************************************************
+  * File Name          : freertos_app.c
+  * Description        : Code for freertos applications
+  */
+/* add user code end Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "freertos_app.h"
+
+/* private includes ----------------------------------------------------------*/
+/* add user code begin private includes */
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
+#include <math.h>
+#include "iap.h"
+#include "ina226_handle.h"
+/* add user code end private includes */
+
+/* private typedef -----------------------------------------------------------*/
+/* add user code begin private typedef */
+
+/* add user code end private typedef */
+
+/* private define ------------------------------------------------------------*/
+/* add user code begin private define */
+#define IAP_TASK_RUN_TIME 10
+#define HEARTBEAT_TIME 10
+#define SERVO_TIME 5
+/* add user code end private define */
+
+/* private macro -------------------------------------------------------------*/
+/* add user code begin private macro */
+
+/* add user code end private macro */
+
+/* private variables ---------------------------------------------------------*/
+/* add user code begin private variables */
+
+/* add user code end private variables */
+
+/* private function prototypes --------------------------------------------*/
+/* add user code begin function prototypes */
+void uart_printf(const char *format, ...);
+void Servo_SetAngle(uint8_t TIM, float Angle);
+/* add user code end function prototypes */
+
+/* private user code ---------------------------------------------------------*/
+/* add user code begin 0 */
+
+/* add user code end 0 */
+
+/* task handler */
+TaskHandle_t check_current_handle;
+TaskHandle_t iap_handle;
+TaskHandle_t send_heartbeat_handle;
+
+/* mutex handler */
+SemaphoreHandle_t xI2CMutex_handle;
+
+/* Idle task control block and stack */
+static StackType_t idle_task_stack[configMINIMAL_STACK_SIZE];
+static StackType_t timer_task_stack[configTIMER_TASK_STACK_DEPTH];
+
+static StaticTask_t idle_task_tcb;
+static StaticTask_t timer_task_tcb;
+
+/* External Idle and Timer task static memory allocation functions */
+extern void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer, StackType_t ** ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
+extern void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer, StackType_t ** ppxTimerTaskStackBuffer, uint32_t * pulTimerTaskStackSize );
+
+/*
+  vApplicationGetIdleTaskMemory gets called when configSUPPORT_STATIC_ALLOCATION
+  equals to 1 and is required for static memory allocation support.
+*/
+void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer, StackType_t ** ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize )
+{
+  *ppxIdleTaskTCBBuffer = &idle_task_tcb;
+  *ppxIdleTaskStackBuffer = &idle_task_stack[0];
+  *pulIdleTaskStackSize = (uint32_t)configMINIMAL_STACK_SIZE;
+}
+/*
+  vApplicationGetTimerTaskMemory gets called when configSUPPORT_STATIC_ALLOCATION
+  equals to 1 and is required for static memory allocation support.
+*/
+void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer, StackType_t ** ppxTimerTaskStackBuffer, uint32_t * pulTimerTaskStackSize )
+{
+  *ppxTimerTaskTCBBuffer = &timer_task_tcb;
+  *ppxTimerTaskStackBuffer = &timer_task_stack[0];
+  *pulTimerTaskStackSize = (uint32_t)configTIMER_TASK_STACK_DEPTH;
+}
+
+/* add user code begin 1 */
+
+/* add user code end 1 */
+
+/**
+  * @brief  initializes all task.
+  * @param  none
+  * @retval none
+  */
+void freertos_task_create(void)
+{
+  /* create check_current task */
+  xTaskCreate(check_current_func,
+              "check_current",
+              128,
+              NULL,
+              2,
+              &check_current_handle);
+
+  /* create iap task */
+  xTaskCreate(iap_func,
+              "iap",
+              128,
+              NULL,
+              0,
+              &iap_handle);
+
+  /* create send_heartbeat task */
+  xTaskCreate(send_heartbeat_func,
+              "send_heartbeat",
+              128,
+              NULL,
+              1,
+              &send_heartbeat_handle);
+}
+
+/**
+  * @brief  initializes all semaphore.
+  * @param  none
+  * @retval none
+  */
+void freertos_semaphore_create(void)
+{
+  /* Create the xI2CMutex */
+  xI2CMutex_handle = xSemaphoreCreateMutex();
+}
+
+/**
+  * @brief  freertos init and begin run.
+  * @param  none
+  * @retval none
+  */
+void wk_freertos_init(void)
+{
+  /* add user code begin freertos_init 0 */
+
+  /* add user code end freertos_init 0 */
+
+  /* enter critical */
+  taskENTER_CRITICAL();
+
+  freertos_semaphore_create();
+  freertos_task_create();
+	
+  /* add user code begin freertos_init 1 */
+
+  /* add user code end freertos_init 1 */
+
+  /* exit critical */
+  taskEXIT_CRITICAL();
+
+  /* start scheduler */
+  vTaskStartScheduler();
+}
+
+/**
+  * @brief check_current function.
+  * @param  none
+  * @retval none
+  */
+void check_current_func(void *pvParameters)
+{
+  /* add user code begin check_current_func 0 */
+  i2c_config();
+  
+  /* add user code end check_current_func 0 */
+
+  /* add user code begin check_current_func 2 */
+  INA226_Init(&ina226);
+  /* add user code end check_current_func 2 */
+
+  /* Infinite loop */
+  while(1)
+  {
+  /* add user code begin check_current_func 1 */
+     ina226_handle();
+     vTaskDelay(INA226_HANDLE_TIME);
+
+  /* add user code end check_current_func 1 */
+  }
+}
+
+
+/**
+  * @brief iap function.
+  * @param  none
+  * @retval none
+  */
+void iap_func(void *pvParameters)
+{
+  /* add user code begin iap_func 0 */
+  
+  /* add user code end iap_func 0 */
+
+  /* add user code begin iap_func 2 */
+  iap_init();
+  /* add user code end iap_func 2 */
+
+  /* Infinite loop */
+  while(1)
+  {
+  /* add user code begin iap_func 1 */
+     iap_command_handle();
+     vTaskDelay(IAP_TASK_RUN_TIME);
+
+  /* add user code end iap_func 1 */
+  }
+}
+
+
+/**
+  * @brief send_heartbeat function.
+  * @param  none
+  * @retval none
+  */
+void send_heartbeat_func(void *pvParameters)
+{
+  /* add user code begin send_heartbeat_func 0 */
+
+  /* add user code end send_heartbeat_func 0 */
+
+  /* add user code begin send_heartbeat_func 2 */
+
+  /* add user code end send_heartbeat_func 2 */
+
+  /* Infinite loop */
+  while(1)
+  {
+  /* add user code begin send_heartbeat_func 1 */
+     uart_printf("电压%f\r\n", ina226.BusVoltage);
+     uart_printf("电流 %f\r\n", ina226.Current);
+     vTaskDelay(HEARTBEAT_TIME);
+
+  /* add user code end send_heartbeat_func 1 */
+  }
+}
+
+
+/* add user code begin 2 */
+// 将浮点数转换为字符串
+static void float_to_str(char *buffer, float num, int precision)
+{
+  int integer_part = (int)num;
+  float decimal_part = num - integer_part;
+
+  // 处理负数
+  if (integer_part < 0)
+  {
+    decimal_part = -decimal_part;
+  }
+
+  // 转换整数部分
+  int i = 0;
+  int temp = integer_part;
+
+  if (temp == 0)
+  {
+    buffer[i++] = '0';
+  }
+  else
+  {
+    if (temp < 0)
+    {
+      buffer[i++] = '-';
+      temp = -temp;
+    }
+
+    char temp_buf[12];
+    int j = 0;
+    while (temp > 0)
+    {
+      temp_buf[j++] = (temp % 10) + '0';
+      temp /= 10;
+    }
+
+    while (j > 0)
+    {
+      buffer[i++] = temp_buf[--j];
+    }
+  }
+
+  // 添加小数点
+  if (precision > 0)
+  {
+    buffer[i++] = '.';
+
+    // 转换小数部分
+    for (int p = 0; p < precision; p++)
+    {
+      decimal_part *= 10;
+      int digit = (int)decimal_part;
+      buffer[i++] = digit + '0';
+      decimal_part -= digit;
+    }
+  }
+
+  buffer[i] = '\0';
+}
+
+// 增强版串口打印函数，支持浮点数
+void uart_printf(const char *format, ...)
+{
+  va_list args;
+  va_start(args, format);
+
+  char buffer[128];
+  int index = 0;
+  int precision = 6; // 默认精度
+
+  while (*format && index < sizeof(buffer) - 1)
+  {
+    // 检查精度设置
+    if (*format == '%' && *(format + 1) == '.' &&
+        (*(format + 2) >= '0' && *(format + 2) <= '9'))
+    {
+      format += 2; // 跳过%.
+      precision = 0;
+
+      // 解析精度数字
+      while (*format >= '0' && *format <= '9')
+      {
+        precision = precision * 10 + (*format - '0');
+        format++;
+      }
+
+      if (*format == 'f')
+      {
+        float num = (float)va_arg(args, double);
+        char float_buf[32];
+        float_to_str(float_buf, num, precision);
+
+        // 复制到缓冲区
+        char *p = float_buf;
+        while (*p && index < sizeof(buffer) - 1)
+        {
+          buffer[index++] = *p++;
+        }
+
+        format++;
+        precision = 6; // 重置默认精度
+        continue;
+      }
+    }
+    else if (*format == '%')
+    {
+      format++;
+      switch (*format)
+      {
+      case 'd': // 整数
+      {
+        int num = va_arg(args, int);
+        char temp[12];
+        int i = 0;
+
+        if (num < 0)
+        {
+          buffer[index++] = '-';
+          num = -num;
+        }
+
+        if (num == 0)
+        {
+          temp[i++] = '0';
+        }
+
+        while (num > 0 && i < 11)
+        {
+          temp[i++] = (num % 10) + '0';
+          num /= 10;
+        }
+
+        while (i > 0)
+        {
+          buffer[index++] = temp[--i];
+        }
+        break;
+      }
+      case 'f': // 浮点数（默认精度6位）
+      {
+        float num = (float)va_arg(args, double);
+        char float_buf[32];
+        float_to_str(float_buf, num, precision);
+
+        // 复制到缓冲区
+        char *p = float_buf;
+        while (*p && index < sizeof(buffer) - 1)
+        {
+          buffer[index++] = *p++;
+        }
+        break;
+      }
+      case 's': // 字符串
+      {
+        char *str = va_arg(args, char *);
+        while (*str && index < sizeof(buffer) - 1)
+        {
+          buffer[index++] = *str++;
+        }
+        break;
+      }
+      case 'c': // 字符
+        buffer[index++] = (char)va_arg(args, int);
+        break;
+      case 'x': // 十六进制小写
+      {
+        unsigned int num = va_arg(args, unsigned int);
+        buffer[index++] = '0';
+        buffer[index++] = 'x';
+
+        char hex_digits[] = "0123456789abcdef";
+        char temp[9];
+        int i = 0;
+
+        do
+        {
+          temp[i++] = hex_digits[num & 0xF];
+          num >>= 4;
+        } while (num > 0 && i < 8);
+
+        // 反转
+        while (i > 0)
+        {
+          buffer[index++] = temp[--i];
+        }
+        break;
+      }
+      case 'X': // 十六进制大写
+      {
+        unsigned int num = va_arg(args, unsigned int);
+        buffer[index++] = '0';
+        buffer[index++] = 'x';
+
+        char hex_digits[] = "0123456789ABCDEF";
+        char temp[9];
+        int i = 0;
+
+        do
+        {
+          temp[i++] = hex_digits[num & 0xF];
+          num >>= 4;
+        } while (num > 0 && i < 8);
+
+        // 反转
+        while (i > 0)
+        {
+          buffer[index++] = temp[--i];
+        }
+        break;
+      }
+      default:
+        buffer[index++] = *format;
+        break;
+      }
+    }
+    else
+    {
+      buffer[index++] = *format;
+    }
+
+    format++;
+  }
+
+  // 发送数据
+  for (int i = 0; i < index; i++)
+  {
+    usart_data_transmit(USART1, buffer[i]);
+    while (usart_flag_get(USART1, USART_TDC_FLAG) == RESET)
+      ;
+  }
+
+  va_end(args);
+}
+/* add user code end 2 */
+

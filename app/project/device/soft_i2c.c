@@ -25,7 +25,6 @@
   */
 #include "soft_i2c.h"
 #include "perf_counter.h"
- 
 /**
   * @brief i2c address direction
   */

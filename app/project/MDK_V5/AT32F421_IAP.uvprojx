@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>7</Optim>
             <oTime>1</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -328,7 +328,7 @@
             <uC99>1</uC99>
             <uGnu>1</uGnu>
             <useXO>0</useXO>
-            <v6Lang>4</v6Lang>
+            <v6Lang>6</v6Lang>
             <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>AT32F421C8T7, USE_STDPERIPH_DRIVER, AT_START_F421_V1</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\libraries\drivers\inc;..\..\libraries\cmsis\cm4\core_support;..\..\libraries\cmsis\cm4\device_support;..\inc;..\system;..\app;..\driver;..\device;..\..\middlewares\i2c_application_library</IncludePath>
+              <IncludePath>..\..\libraries\drivers\inc;..\..\libraries\cmsis\cm4\core_support;..\..\libraries\cmsis\cm4\device_support;..\inc;..\system;..\app;..\driver;..\device;..\..\middlewares\i2c_application_library;../../middlewares/freertos/source/include;../../middlewares/freertos/source/portable/memmang;../../middlewares/freertos/source/portable/GCC/ARM_CM3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -399,11 +399,6 @@
               <FilePath>..\src\main.c</FilePath>
             </File>
             <File>
-              <FileName>wk_system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\wk_system.c</FilePath>
-            </File>
-            <File>
               <FileName>wk_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\wk_usart.c</FilePath>
@@ -433,17 +428,20 @@
               <FileType>1</FileType>
               <FilePath>..\src\wk_dma.c</FilePath>
             </File>
+            <File>
+              <FileName>freertos_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../src/freertos_app.c</FilePath>
+            </File>
+            <File>
+              <FileName>include_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../src/include_port.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>system</GroupName>
-          <Files>
-            <File>
-              <FileName>tmt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\system\tmt.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>firmware</GroupName>
@@ -545,6 +543,51 @@
         </Group>
         <Group>
           <GroupName>::Utilities</GroupName>
+        </Group>
+        <Group>
+          <GroupName>middlewares/freertos</GroupName>
+          <Files>
+            <File>
+              <FileName>croutine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/croutine.c</FilePath>
+            </File>
+            <File>
+              <FileName>event_groups.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/event_groups.c</FilePath>
+            </File>
+            <File>
+              <FileName>list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/list.c</FilePath>
+            </File>
+            <File>
+              <FileName>queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/tasks.c</FilePath>
+            </File>
+            <File>
+              <FileName>timers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/timers.c</FilePath>
+            </File>
+            <File>
+              <FileName>heap_4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/portable/memmang/heap_4.c</FilePath>
+            </File>
+            <File>
+              <FileName>stream_buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/freertos/source/stream_buffer.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

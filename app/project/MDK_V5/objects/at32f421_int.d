@@ -15,6 +15,18 @@
   ..\..\libraries\drivers\inc\at32f421_debug.h \
   ..\..\libraries\drivers\inc\at32f421_flash.h \
   ..\..\libraries\drivers\inc\at32f421_misc.h \
-  ..\..\libraries\drivers\inc\at32f421_scfg.h ..\inc\wk_system.h \
-  ..\inc\iap.h ..\system\tmt.h ..\inc\wk_usart.h \
-  ..\inc\at32f421_wk_config.h
+  ..\..\libraries\drivers\inc\at32f421_scfg.h ..\inc\freertos_app.h \
+  ..\..\middlewares\freertos\source\include\FreeRTOS.h \
+  ..\inc\FreeRTOSConfig.h \
+  ..\..\middlewares\freertos\source\include\projdefs.h \
+  ..\..\middlewares\freertos\source\include\portable.h \
+  ..\..\middlewares\freertos\source\include\deprecated_definitions.h \
+  ..\..\middlewares\freertos\source\portable\GCC\ARM_CM3\portmacro.h \
+  ..\..\middlewares\freertos\source\include\mpu_wrappers.h \
+  ..\..\middlewares\freertos\source\include\task.h \
+  ..\..\middlewares\freertos\source\include\list.h \
+  ..\..\middlewares\freertos\source\include\semphr.h \
+  ..\..\middlewares\freertos\source\include\queue.h \
+  ..\..\middlewares\freertos\source\include\timers.h \
+  ..\..\middlewares\freertos\source\include\event_groups.h ..\inc\iap.h \
+  ..\inc\wk_usart.h ..\inc\at32f421_wk_config.h

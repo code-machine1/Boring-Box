@@ -1,7 +1,7 @@
 /**
   **************************************************************************
-  * @file     wk_system.h
-  * @brief    workbench system header file
+  * @file     include_port.c
+  * @brief    include_port program
   **************************************************************************
   * Copyright (c) 2025, Artery Technology, All rights reserved.
   *
@@ -21,22 +21,30 @@
   *
   **************************************************************************
   */
-/* define to prevent recursive inclusion -------------------------------------*/
-#ifndef __WK_SYSTEM_H
-#define __WK_SYSTEM_H
 
-#ifdef __cplusplus
-extern "C" {
+/** @addtogroup UTILITIES_examples
+  * @{
+  */
+
+/** @addtogroup FreeRTOS_demo
+  * @{
+  */
+
+/* support ac5 and ac6 compiler */
+#if (__ARMCC_VERSION > 6000000)
+
+#include "..\..\..\middlewares\freertos\source\portable\GCC\ARM_CM3\port.c"
+
+#else
+
+#include "..\..\..\middlewares\freertos\source\portable\rvds\ARM_CM3\port.c"
+
 #endif
 
-#include "at32f421.h"
+/**
+  * @}
+  */
 
-void wk_timebase_init(void);
-void wk_timebase_handler(void);
-void wk_delay_ms(uint32_t delay);
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif
+/**
+  * @}
+  */

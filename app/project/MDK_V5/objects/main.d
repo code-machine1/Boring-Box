@@ -17,8 +17,20 @@
   ..\..\libraries\drivers\inc\at32f421_misc.h \
   ..\..\libraries\drivers\inc\at32f421_scfg.h ..\inc\wk_adc.h \
   ..\inc\wk_tmr.h ..\inc\wk_usart.h ..\inc\wk_dma.h ..\inc\wk_gpio.h \
-  ..\inc\wk_system.h ..\inc\iap.h ..\system\tmt.h ..\app\ina226_handle.h \
-  ..\device\soft_i2c.h \
+  ..\inc\freertos_app.h \
+  ..\..\middlewares\freertos\source\include\FreeRTOS.h \
+  ..\inc\FreeRTOSConfig.h \
+  ..\..\middlewares\freertos\source\include\projdefs.h \
+  ..\..\middlewares\freertos\source\include\portable.h \
+  ..\..\middlewares\freertos\source\include\deprecated_definitions.h \
+  ..\..\middlewares\freertos\source\portable\GCC\ARM_CM3\portmacro.h \
+  ..\..\middlewares\freertos\source\include\mpu_wrappers.h \
+  ..\..\middlewares\freertos\source\include\task.h \
+  ..\..\middlewares\freertos\source\include\list.h \
+  ..\..\middlewares\freertos\source\include\semphr.h \
+  ..\..\middlewares\freertos\source\include\queue.h \
+  ..\..\middlewares\freertos\source\include\timers.h \
+  ..\..\middlewares\freertos\source\include\event_groups.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.4\perf_counter.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.4\perfc_port_default.h \
   ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h
