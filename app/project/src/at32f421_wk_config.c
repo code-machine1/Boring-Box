@@ -69,8 +69,8 @@
   *         - sclk                = 120000000
   *         - ahbdiv              = 1
   *         - ahbclk              = 120000000
-  *         - apb1div             = 1
-  *         - apb1clk             = 120000000
+  *         - apb1div             = 2
+  *         - apb1clk             = 60000000
   *         - apb2div             = 1
   *         - apb2clk             = 120000000
   *         - pll_mult            = 30
@@ -120,7 +120,7 @@ void wk_system_clock_config(void)
   crm_apb2_div_set(CRM_APB2_DIV_1);
 
   /* config apb1clk */
-  crm_apb1_div_set(CRM_APB1_DIV_1);
+  crm_apb1_div_set(CRM_APB1_DIV_2);
 
   /* enable auto step mode */
   crm_auto_step_mode_enable(TRUE);
@@ -147,6 +147,9 @@ void wk_system_clock_config(void)
   */
 void wk_periph_clock_config(void)
 {
+  /* enable dma1 periph clock */
+  crm_periph_clock_enable(CRM_DMA1_PERIPH_CLOCK, TRUE);
+
   /* enable gpioa periph clock */
   crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
 
@@ -158,6 +161,9 @@ void wk_periph_clock_config(void)
 
   /* enable gpiof periph clock */
   crm_periph_clock_enable(CRM_GPIOF_PERIPH_CLOCK, TRUE);
+
+  /* enable scfg periph clock */
+  crm_periph_clock_enable(CRM_SCFG_PERIPH_CLOCK, TRUE);
 
   /* enable adc1 periph clock */
   crm_periph_clock_enable(CRM_ADC1_PERIPH_CLOCK, TRUE);

@@ -58,9 +58,9 @@ extern "C" {
 
 /* add user code begin dma define */
 /* user can only modify the dma define value */
-//#define DMA1_CHANNEL1_BUFFER_SIZE   0
-//#define DMA1_CHANNEL1_MEMORY_BASE_ADDR   0
-//#define DMA1_CHANNEL1_PERIPHERAL_BASE_ADDR  0
+#define DMA1_CHANNEL1_BUFFER_SIZE   0
+#define DMA1_CHANNEL1_MEMORY_BASE_ADDR   0
+#define DMA1_CHANNEL1_PERIPHERAL_BASE_ADDR  0
 
 //#define DMA1_CHANNEL2_BUFFER_SIZE   0
 //#define DMA1_CHANNEL2_MEMORY_BASE_ADDR   0
@@ -78,10 +78,6 @@ extern "C" {
 //#define DMA1_CHANNEL5_MEMORY_BASE_ADDR   0
 //#define DMA1_CHANNEL5_PERIPHERAL_BASE_ADDR   0
 /* add user code end dma define */
-
-/* Private defines -------------------------------------------------------------*/
-#define LED_PIN    GPIO_PINS_11
-#define LED_GPIO_PORT    GPIOB
 
 /* exported functions ------------------------------------------------------- */
   /* system clock config. */

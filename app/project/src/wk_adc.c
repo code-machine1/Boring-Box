@@ -71,6 +71,8 @@ void wk_adc1_init(void)
   /* adc_ordinary_conversionmode-------------------------------------------- */
   adc_ordinary_channel_set(ADC1, ADC_CHANNEL_1, 1, ADC_SAMPLETIME_1_5);
 
+  /* When "ADCx_ORDINARY_TRIG_SOFTWARE" is selected, user can only use software trigger. \
+  The software trigger function is adc_ordinary_software_trigger_enable(ADCx, TRUE); */
   adc_ordinary_conversion_trigger_set(ADC1, ADC12_ORDINARY_TRIG_SOFTWARE, TRUE);
 
   adc_ordinary_part_mode_enable(ADC1, FALSE);

@@ -4,7 +4,7 @@
   * @file     wk_system.c
   * @brief    work bench config program
   **************************************************************************
-  *                       Copyright notice & Disclaimer
+  * Copyright (c) 2025, Artery Technology, All rights reserved.
   *
   * The software Board Support Package (BSP) that is made available to
   * download from Artery official website is the copyrighted work of Artery.
@@ -85,7 +85,6 @@ __WEAK void wk_timebase_init(void)
   crm_clocks_freq_get(&crm_clocks);
 
   frequency = crm_clocks.ahb_freq;
-
   /* config systick clock source */
   systick_clock_source_config(SYSTICK_CLOCK_SOURCE_AHBCLK_NODIV);
   /* system tick config */

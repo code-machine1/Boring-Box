@@ -17,22 +17,29 @@ Library Manager: ArmAr.exe V6.22
 Hex Converter:   FromElf.exe V6.22
 CPU DLL:         SARMCM3.DLL V5.40.0.5
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      Segger\JL2CM3.dll V2.99.45.0
+Target DLL:      CMSIS_AGDI.dll V1.33.21.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\Work Area\Code For Myself\Boring Box\app\project\MDK_V5\AT32F421_IAP.uvprojx
-Project File Date:  10/20/2025
+d:\Work Area\Code For Myself\Boring Box\app\project\MDK_V5\AT32F421_IAP.uvprojx
+Project File Date:  01/09/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'AT32F421_IAP'
+../src/main.c(193): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  193 |   uart_printf("<B5><E7>ѹ%f\r\n", ina226.BusVoltage);
+      |                ^~~~~~~~
+../src/main.c(194): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  194 |   uart_printf("<B5><E7><C1><F7> %f\r\n", ina226.Current);
+      |                ^~~~~~~~~~~~~~~~
+2 warnings generated.
 compiling main.c...
 linking...
-Program Size: Code=18872 RO-data=316 RW-data=16 ZI-data=2544  
+Program Size: Code=16822 RO-data=326 RW-data=4 ZI-data=1244  
 FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin --output .\Listings\AT32F421_IAP.bin .\objects\AT32F421_IAP.axf
-".\objects\AT32F421_IAP.axf" - 0 Error(s), 0 Warning(s).
+".\objects\AT32F421_IAP.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -42,64 +49,33 @@ Package Vendor: ARM
                 CMSIS (Common Microcontroller Software Interface Standard)
    * Component: CORE Version: 6.1.0
 
-Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS-Compiler.2.1.0.pack
-                ARM::CMSIS-Compiler@2.1.0
-                CMSIS Compiler extensions for Arm Compiler, GCC, Clang, and IAR Compiler
-   * Component: STDOUT Version: 1.1.0
-   * Component: CORE Version: 1.1.0
-   * Component: Event Recorder Version: 1.1.0
-
-Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS-View.1.2.0.pack
-                ARM::CMSIS-View@1.2.0
-                Debugger visualization of software events and statistics
-   * Component: Event Recorder Variant: DAP Version: 1.6.0
-
 Package Vendor: ArteryTek
                 
                 ArteryTek::AT32F421_DFP@2.1.8
                 ArteryTek AT32F421 Series Device Support,Drivers
 
 Package Vendor: GorgonMeducer
-                https://raw.githubusercontent.com/GorgonMeducer/perf_counter/CMSIS-Pack/cmsis-pack/GorgonMeducer.perf_counter.2.5.2.pack
-                GorgonMeducer::perf_counter@2.5.2
-                A dedicated performance counter mainly for micro-controllers. For Cortex-M processors, the `perf_counter` uses the SysTick by default. It shares the SysTick with users' original SysTick functions without interfering with them. This library brings new functionalities, such as performance counter, `perfc_delay_us()`, `perfc_delay_ms()` and implements `clock()` defined in `time.h`. It provides a template for porting the `perf_counter` to different architectures or using a different Timer instead of SysTick in Cortex-M processors.
-   * Component: Core Variant: Source Version: 2.5.2
+                https://raw.githubusercontent.com/GorgonMeducer/perf_counter/CMSIS-Pack/cmsis-pack/GorgonMeducer.perf_counter.2.5.4.pack
+                GorgonMeducer::perf_counter@2.5.4
+                This is a dedicated performance counter designed for micro-controllers. For Cortex-M processors, the `perf_counter` uses the SysTick by default. It shares the SysTick with users' original SysTick functions without interfering with them. This library brings new functionalities, such as performance counter, `perfc_delay_us()`, `perfc_delay_ms()` and implements `clock()` defined in `time.h`. It provides a template for porting the `perf_counter` to different architectures or using a different Timer instead of SysTick in Cortex-M processors.
+   * Component: Core Variant: Source Version: 2.5.4
 
 <h2>Collection of Component include folders:</h2>
-  ./RTE/CMSIS-View
   ./RTE/_AT32F421_IAP
-  D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include
-  D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include
   D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
   D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F421_DFP/2.1.8/Device/Include
-  D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.2
+  D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.4
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ::CMSIS-Compiler:STDOUT(API)@1.1.0
-      Include file:  include/retarget_stdout.h
-
-   * Component: ARM::CMSIS-Compiler:CORE@1.1.0
-      Source file:   source/armcc/retarget_io.c
-
-   * Component: ARM::CMSIS-Compiler:STDOUT:Event Recorder@1.1.0
-      Source file:   source/stdout_evr.c
-
-   * Component: ARM::CMSIS-View:Event Recorder&DAP@1.6.0
-      Source file:   EventRecorder/Source/EventRecorder.c
-      Include file:  EventRecorder/Config/EventRecorderConf.h
-      Include file:  EventRecorder/Include/EventRecorder.h
-
    * Component: ARM::CMSIS:CORE@6.1.0
 
-   * Component: GorgonMeducer::Utilities:perf_counter:Core&Source@2.5.2
-      Include file:  perf_counter.h
-      Source file:   perfc_port_default.c
+   * Component: GorgonMeducer::Utilities:perf_counter:Core&Source@2.5.4
       Source file:   systick_wrapper_gnu.s
+      Source file:   perfc_port_default.c
       Source file:   perf_counter.c
-Build Time Elapsed:  00:00:00
+      Include file:  perf_counter.h
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

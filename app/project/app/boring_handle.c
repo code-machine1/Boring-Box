@@ -21,4 +21,4 @@ void (* pull_lid)(struct box * p_box)
 	
 }
 
-void 
+ 

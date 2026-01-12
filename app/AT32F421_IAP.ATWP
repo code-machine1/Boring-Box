@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
     <WorkBenchVersion>
-        <Version>V1.2.00</Version>
+        <Version>V1.2.02</Version>
     </WorkBenchVersion>
     <MCUInfo>
         <MCUSerials>AT32F421</MCUSerials>
@@ -51,10 +51,16 @@
             <ParametersSub name="RealBaudRate" value="115163"/>
         </Parameters>
     </USART1>
+    <DMA>
+        <MEMTOMEM0>
+            <ParametersSub name="Instance" value="DMA1_Channel1"/>
+        </MEMTOMEM0>
+    </DMA>
     <NVIC>
         <SysTick_Handler>1;15;0;0;0</SysTick_Handler>
         <FLASH_IRQHandler>0;0;0;0;0</FLASH_IRQHandler>
         <CRM_IRQHandler>0;0;0;0;0</CRM_IRQHandler>
+        <DMA1_Channel1_IRQHandler>0;0;0;0;0</DMA1_Channel1_IRQHandler>
         <ADC1_CMP_IRQHandler>0;0;0;0;0</ADC1_CMP_IRQHandler>
         <TMR3_GLOBAL_IRQHandler>0;0;0;0;0</TMR3_GLOBAL_IRQHandler>
         <USART1_IRQHandler>1;0;0;0;0</USART1_IRQHandler>
@@ -63,9 +69,13 @@
         <Signal SignalName="GPIO_Input" PinName="PA0">
             <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_UP"/>
         </Signal>
-        <Signal SignalName="GPIO_Output" PinName="PB11">
+        <Signal SignalName="GPIO_Output" PinName="PF6">
             <Parameters name="GPIO_Outputlevel" value="GPIO_OUTPUTLEVEL_HIGH"/>
-            <Parameters name="Label" value="LED"/>
+            <Parameters name="GPIO_DriverCapability" value="GPIO_DRIVE_STRENGTH_STRONGER"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PF7">
+            <Parameters name="GPIO_Outputlevel" value="GPIO_OUTPUTLEVEL_HIGH"/>
+            <Parameters name="GPIO_DriverCapability" value="GPIO_DRIVE_STRENGTH_STRONGER"/>
         </Signal>
     </GPIO>
     <ClockConfiguration>
@@ -82,7 +92,7 @@
         <pllfr>8</pllfr>
         <sclkselect>1</sclkselect>
         <ahbdiv>1</ahbdiv>
-        <apb1div>1</apb1div>
+        <apb1div>2</apb1div>
         <apb2div>1</apb2div>
         <hicktosclk>0</hicktosclk>
         <clkout>0</clkout>
@@ -95,11 +105,13 @@
     <PINInfo>
         <PinSub pinname="PA0" signalname="GPIO_Input" signaltype="3"/>
         <PinSub pinname="PA1" signalname="ADC1_IN1" signaltype="3"/>
-        <PinSub pinname="PB11" signalname="GPIO_Output" signaltype="3"/>
         <PinSub pinname="PA9" signalname="USART1_TX" signaltype="2"/>
         <PinSub pinname="PA10" signalname="USART1_RX" signaltype="2"/>
         <PinSub pinname="PA13" signalname="DEBUG_SWDIO" signaltype="2"/>
+        <PinSub pinname="PF6" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PF7" signalname="GPIO_Output" signaltype="3"/>
         <PinSub pinname="PA14" signalname="DEBUG_SWCLK" signaltype="2"/>
+        <PinSub pinname="PA15" signalname="GPIO_Input" signaltype="3"/>
         <PinSub pinname="PB4" signalname="TMR3_CH1" signaltype="3"/>
         <PinSub pinname="PB5" signalname="TMR3_CH2" signaltype="3"/>
     </PINInfo>

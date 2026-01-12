@@ -27,7 +27,6 @@
 /* includes ------------------------------------------------------------------*/
 #include "at32f421_int.h"
 #include "wk_system.h"
-
 /* private includes ----------------------------------------------------------*/
 /* add user code begin private includes */
 #include "iap.h"
@@ -219,7 +218,6 @@ void SysTick_Handler(void)
   /* add user code end SysTick_IRQ 0 */
 
   wk_timebase_handler();
-
   /* add user code begin SysTick_IRQ 1 */
 
   /* add user code end SysTick_IRQ 1 */
@@ -246,6 +244,7 @@ void USART1_IRQHandler(void)
   }
 
   /* add user code end USART1_IRQ 0 */
+
   /* add user code begin USART1_IRQ 1 */
 
   /* add user code end USART1_IRQ 1 */

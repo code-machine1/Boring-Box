@@ -1,0 +1,16 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F421_IAP'
+../src/main.c(193): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  193 |   uart_printf("<B5><E7>ѹ%f\r\n", ina226.BusVoltage);
+      |                ^~~~~~~~
+../src/main.c(194): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  194 |   uart_printf("<B5><E7><C1><F7> %f\r\n", ina226.Current);
+      |                ^~~~~~~~~~~~~~~~
+2 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=16822 RO-data=326 RW-data=4 ZI-data=1244  
+FromELF: creating hex file...
+After Build - User command #1: fromelf.exe --bin --output .\Listings\AT32F421_IAP.bin .\objects\AT32F421_IAP.axf
+".\objects\AT32F421_IAP.axf" - 0 Error(s), 2 Warning(s).
+Build Time Elapsed:  00:00:01
