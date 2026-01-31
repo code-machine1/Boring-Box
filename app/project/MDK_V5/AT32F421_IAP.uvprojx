@@ -539,12 +539,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::Utilities</GroupName>
-        </Group>
-        <Group>
           <GroupName>middlewares/freertos</GroupName>
           <Files>
             <File>
@@ -588,6 +582,12 @@
               <FilePath>../../middlewares/freertos/source/stream_buffer.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Utilities</GroupName>
         </Group>
       </Groups>
     </Target>
