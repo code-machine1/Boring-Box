@@ -15,8 +15,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <math.h>
-#include "iap.h"
-#include "ina226_handle.h"
+
 /* add user code end private includes */
 
 /* private typedef -----------------------------------------------------------*/
@@ -56,9 +55,11 @@ void Servo_SetAngle(uint8_t TIM, float Angle);
 TaskHandle_t check_current_handle;
 TaskHandle_t iap_handle;
 TaskHandle_t send_heartbeat_handle;
+TaskHandle_t servo_handle;
 
-/* mutex handler */
-SemaphoreHandle_t xI2CMutex_handle;
+/* queue handler */
+QueueHandle_t ina226_value_handle;
+QueueHandle_t my_queue02_handle;
 
 /* Idle task control block and stack */
 static StackType_t idle_task_stack[configMINIMAL_STACK_SIZE];
@@ -108,7 +109,7 @@ void freertos_task_create(void)
               "check_current",
               128,
               NULL,
-              2,
+              0,
               &check_current_handle);
 
   /* create iap task */
@@ -124,19 +125,30 @@ void freertos_task_create(void)
               "send_heartbeat",
               128,
               NULL,
-              1,
+              0,
               &send_heartbeat_handle);
+
+  /* create servo task */
+  xTaskCreate(servo_func,
+              "servo",
+              128,
+              NULL,
+              0,
+              &servo_handle);
 }
 
 /**
-  * @brief  initializes all semaphore.
+  * @brief  initializes all queue.
   * @param  none
   * @retval none
   */
-void freertos_semaphore_create(void)
+void freertos_queue_create(void)
 {
-  /* Create the xI2CMutex */
-  xI2CMutex_handle = xSemaphoreCreateMutex();
+  /* Create the ina226_value, storing the returned handle in the xQueue variable. */
+  ina226_value_handle = xQueueCreate(16, sizeof(ina226));
+
+  /* Create the my_queue02, storing the returned handle in the xQueue variable. */
+  my_queue02_handle = xQueueCreate(16, sizeof(uint16_t));
 }
 
 /**
@@ -153,7 +165,7 @@ void wk_freertos_init(void)
   /* enter critical */
   taskENTER_CRITICAL();
 
-  freertos_semaphore_create();
+  freertos_queue_create();
   freertos_task_create();
 	
   /* add user code begin freertos_init 1 */
@@ -246,6 +258,33 @@ void send_heartbeat_func(void *pvParameters)
      vTaskDelay(HEARTBEAT_TIME);
 
   /* add user code end send_heartbeat_func 1 */
+  }
+}
+
+
+/**
+  * @brief servo function.
+  * @param  none
+  * @retval none
+  */
+void servo_func(void *pvParameters)
+{
+  /* add user code begin servo_func 0 */
+
+  /* add user code end servo_func 0 */
+
+  /* add user code begin servo_func 2 */
+
+  /* add user code end servo_func 2 */
+
+  /* Infinite loop */
+  while(1)
+  {
+  /* add user code begin servo_func 1 */
+
+    vTaskDelay(1);
+
+  /* add user code end servo_func 1 */
   }
 }
 

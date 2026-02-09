@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
     <WorkBenchVersion>
-        <Version>V1.2.02</Version>
+        <Version>V1.2.03</Version>
     </WorkBenchVersion>
     <MCUInfo>
         <MCUSerials>AT32F421</MCUSerials>
@@ -56,11 +56,12 @@
             <ParametersSub name="MCU_SRAM_SIZE" value="16384"/>
             <ParametersSub name="configCPU_CLOCK_HZ" value="120000000"/>
             <ParametersSub name="configUSE_RECURSIVE_MUTEXES" value="1"/>
+            <ParametersSub name="TOTAL_HEAP_SIZE" value="4096"/>
         </Parameters>
         <Tasks>
             <ParametersGroup>
                 <ParametersSub name="TaskName" value="check_current"/>
-                <ParametersSub name="TaskPriority" value="2"/>
+                <ParametersSub name="TaskPriority" value="0"/>
                 <ParametersSub name="TaskStackSize" value="128"/>
                 <ParametersSub name="TaskEntryFunction" value="check_current_func"/>
                 <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
@@ -82,7 +83,7 @@
             </ParametersGroup>
             <ParametersGroup>
                 <ParametersSub name="TaskName" value="send_heartbeat"/>
-                <ParametersSub name="TaskPriority" value="1"/>
+                <ParametersSub name="TaskPriority" value="0"/>
                 <ParametersSub name="TaskStackSize" value="128"/>
                 <ParametersSub name="TaskEntryFunction" value="send_heartbeat_func"/>
                 <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
@@ -91,14 +92,38 @@
                 <ParametersSub name="TaskStackBuffer" value="NULL"/>
                 <ParametersSub name="TaskBuffer" value="NULL"/>
             </ParametersGroup>
-        </Tasks>
-        <Mutexes>
             <ParametersGroup>
-                <ParametersSub name="MutexName" value="xI2CMutex"/>
-                <ParametersSub name="MutexAllocation" value="Dynamic"/>
-                <ParametersSub name="MutexBuffer" value="NULL"/>
+                <ParametersSub name="TaskName" value="servo"/>
+                <ParametersSub name="TaskPriority" value="0"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
+                <ParametersSub name="TaskEntryFunction" value="servo_func"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
             </ParametersGroup>
-        </Mutexes>
+        </Tasks>
+        <Queues>
+            <ParametersGroup>
+                <ParametersSub name="QueueName" value="ina226_value"/>
+                <ParametersSub name="QueueSize" value="16"/>
+                <ParametersSub name="QueueItemSize" value="uint16_t"/>
+                <ParametersSub name="QueueAllocation" value="Dynamic"/>
+                <ParametersSub name="QueueBufferName" value="NULL"/>
+                <ParametersSub name="QueueBufferSize" value="n/a"/>
+                <ParametersSub name="QueueBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="QueueName" value="my_queue02"/>
+                <ParametersSub name="QueueSize" value="16"/>
+                <ParametersSub name="QueueItemSize" value="uint16_t"/>
+                <ParametersSub name="QueueAllocation" value="Dynamic"/>
+                <ParametersSub name="QueueBufferName" value="NULL"/>
+                <ParametersSub name="QueueBufferSize" value="n/a"/>
+                <ParametersSub name="QueueBuffer" value="NULL"/>
+            </ParametersGroup>
+        </Queues>
     </FREERTOS>
     <DMA>
         <MEMTOMEM0>
@@ -170,6 +195,7 @@
         <ProjectLocation>D:/Work Area/Code For Myself/Boring Box/app</ProjectLocation>
         <ToolchainIDE>MDK_V5</ToolchainIDE>
         <ARMCompiler>1</ARMCompiler>
+        <BackupCode>true</BackupCode>
         <KeepUserCode>true</KeepUserCode>
         <NotUsedPinAnalog>true</NotUsedPinAnalog>
         <CodeSplitIP>true</CodeSplitIP>
@@ -177,6 +203,6 @@
         <MinHeapSize>0x200</MinHeapSize>
         <MinStackSize>0x400</MinStackSize>
         <UseFirmware>true</UseFirmware>
-        <PackageVersion>V2.1.8</PackageVersion>
+        <PackageVersion>V2.1.9</PackageVersion>
     </ProjectInfomation>
 </Root>

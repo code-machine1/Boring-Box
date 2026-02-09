@@ -136,8 +136,8 @@ void wk_system_clock_config(void)
   /* disable auto step mode */
   crm_auto_step_mode_enable(FALSE);
 
-  /* update system_core_clock global variable */
-  system_core_clock_update();
+  /* update SystemCoreClock global variable */
+  SystemCoreClock_update();
 }
 
 /**

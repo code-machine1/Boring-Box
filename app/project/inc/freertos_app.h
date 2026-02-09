@@ -19,7 +19,9 @@
 
 /* private includes -------------------------------------------------------------*/
 /* add user code begin private includes */
-
+#include "iap.h"
+#include "ina226_handle.h"
+#include "servo_handle.h"
 /* add user code end private includes */
 
 /* exported types -------------------------------------------------------------*/
@@ -41,20 +43,23 @@
 extern TaskHandle_t check_current_handle;
 extern TaskHandle_t iap_handle;
 extern TaskHandle_t send_heartbeat_handle;
+extern TaskHandle_t servo_handle;
 /* declaration for task function */
 void check_current_func(void *pvParameters);
 void iap_func(void *pvParameters);
 void send_heartbeat_func(void *pvParameters);
+void servo_func(void *pvParameters);
 
-/* mutex handler */
-extern SemaphoreHandle_t xI2CMutex_handle;
+/* queue handler */
+extern QueueHandle_t ina226_value_handle;
+extern QueueHandle_t my_queue02_handle;
 
 /* add user code begin 0 */
 
 /* add user code end 0 */
 
 void freertos_task_create(void);
-void freertos_semaphore_create(void);
+void freertos_queue_create(void);
 void wk_freertos_init(void);
 
 /* add user code begin 1 */

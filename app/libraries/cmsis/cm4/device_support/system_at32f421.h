@@ -3,7 +3,8 @@
   * @file     system_at32f421.h
   * @brief    cmsis cortex-m4 system header file.
   **************************************************************************
-  *                       Copyright notice & Disclaimer
+  *
+  * Copyright (c) 2025, Artery Technology, All rights reserved.
   *
   * The software Board Support Package (BSP) that is made available to
   * download from Artery official website is the copyrighted work of Artery.
@@ -68,7 +69,7 @@ extern unsigned int SystemCoreClock; /*!< system clock frequency (core clock) */
   */
 
 extern void SystemInit(void);
-extern void system_core_clock_update(void);
+extern void SystemCoreClock_update(void);
 
 /**
   * @}

@@ -29,4 +29,5 @@
   ..\..\middlewares\freertos\source\include\queue.h \
   ..\..\middlewares\freertos\source\include\timers.h \
   ..\..\middlewares\freertos\source\include\event_groups.h ..\inc\iap.h \
+  ..\app\ina226_handle.h ..\device\soft_i2c.h ..\app\servo_handle.h \
   ..\inc\wk_usart.h ..\inc\at32f421_wk_config.h

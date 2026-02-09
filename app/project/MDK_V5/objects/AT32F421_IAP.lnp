@@ -24,6 +24,7 @@
 ".\objects\system_at32f421.o"
 ".\objects\startup_at32f421.o"
 ".\objects\ina226_handle.o"
+".\objects\servo_handle.o"
 ".\objects\soft_i2c.o"
 ".\objects\perf_counter.o"
 ".\objects\perfc_port_default.o"

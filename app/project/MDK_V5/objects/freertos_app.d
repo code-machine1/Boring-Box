@@ -29,4 +29,4 @@
   ..\..\libraries\drivers\inc\at32f421_flash.h \
   ..\..\libraries\drivers\inc\at32f421_misc.h \
   ..\..\libraries\drivers\inc\at32f421_scfg.h ..\app\ina226_handle.h \
-  ..\device\soft_i2c.h
+  ..\device\soft_i2c.h ..\app\servo_handle.h

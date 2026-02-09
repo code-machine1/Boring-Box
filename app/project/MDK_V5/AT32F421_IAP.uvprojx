@@ -526,6 +526,11 @@
               <FileType>1</FileType>
               <FilePath>..\app\ina226_handle.c</FilePath>
             </File>
+            <File>
+              <FileName>servo_handle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\servo_handle.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -537,6 +542,12 @@
               <FilePath>..\device\soft_i2c.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Utilities</GroupName>
         </Group>
         <Group>
           <GroupName>middlewares/freertos</GroupName>
@@ -582,12 +593,6 @@
               <FilePath>../../middlewares/freertos/source/stream_buffer.c</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::Utilities</GroupName>
         </Group>
       </Groups>
     </Target>

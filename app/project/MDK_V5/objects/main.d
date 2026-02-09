@@ -30,7 +30,8 @@
   ..\..\middlewares\freertos\source\include\semphr.h \
   ..\..\middlewares\freertos\source\include\queue.h \
   ..\..\middlewares\freertos\source\include\timers.h \
-  ..\..\middlewares\freertos\source\include\event_groups.h \
+  ..\..\middlewares\freertos\source\include\event_groups.h ..\inc\iap.h \
+  ..\app\ina226_handle.h ..\device\soft_i2c.h ..\app\servo_handle.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.4\perf_counter.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.4\perfc_port_default.h \
   ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h
